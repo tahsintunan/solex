@@ -1,12 +1,13 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { FC, useState } from "react";
 import { notify } from "../utils/notifications";
-import { GetProgramAccountsFilter } from "@solana/web3.js";
+import { GetProgramAccountsFilter, PublicKey } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 
 export const GetTokens: FC = () => {
     const { connection } = useConnection();
     const { publicKey } = useWallet();
+    // const publicKey = new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
 
     const [tokenTable, setTokenTable] = useState(null);
 
@@ -46,7 +47,7 @@ export const GetTokens: FC = () => {
             },
         ];
         const accounts = await connection.getParsedProgramAccounts(
-            TOKEN_PROGRAM_ID, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+            TOKEN_PROGRAM_ID, // new PublicKey("tokenString")
             {
                 filters: filters,
             }
