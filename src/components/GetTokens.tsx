@@ -10,6 +10,28 @@ export const GetTokens: FC = () => {
 
     const [tokenTable, setTokenTable] = useState(null);
 
+    const onClick = async () => {
+        if (!publicKey) {
+            console.log("error", "Wallet not connected!");
+            notify({
+                type: "error",
+                message: "error",
+                description: "Wallet not connected!",
+            });
+            return;
+        }
+        try {
+            await getTokenAccounts(publicKey.toString());
+        } catch (error: any) {
+            notify({
+                type: "error",
+                message: `Couldn't Find Token Accounts!`,
+                description: error?.message,
+            });
+            console.log("error", `Error finding Token Accounts! ${error?.message}`);
+        }
+    };
+
     // get all token accounts held by a wallet and display them in a table
     async function getTokenAccounts(wallet: string) {
         const filters: GetProgramAccountsFilter[] = [
@@ -65,5 +87,17 @@ export const GetTokens: FC = () => {
         }
     }
 
-    return <div>{/* Render Results Here */}</div>;
+    return (
+        <div>
+            <div className="text-center">
+                <button
+                    className="px-8 m-2 btn animate-pulse bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500"
+                    onClick={onClick}
+                >
+                    <span>Get Token Accounts</span>
+                </button>
+            </div>
+            <div>{tokenTable}</div>
+        </div>
+    );
 };
