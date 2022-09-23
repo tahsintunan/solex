@@ -1,6 +1,6 @@
 # Solex
 
-Solex allows users to look up transactions and accounts on the various Solana clusters. Solex takes inspiration from [Explorer | Solana](https://explorer.solana.com/). Solex let's you connect your wallet, check your balance, get yout token accounts, and view your transaction history with great details.
+Solex allows users to look up transactions and accounts on the various Solana clusters. Solex takes inspiration from [Explorer | Solana](https://explorer.solana.com/). Solex lets you connect your wallet, check your balance, get your token accounts, and view your transaction history with great details.
 
 
 
@@ -9,7 +9,7 @@ Solex allows users to look up transactions and accounts on the various Solana cl
 Solex contains the following features:
 
 ```
-- Wallet Integration with Auto Connec / Refresh
+- Wallet Integration with Auto Connect / Refresh
 
 - State Management
 
@@ -17,7 +17,7 @@ Solex contains the following features:
 
 - Web3 Js: Uses of web3 js including a transaction with a connection provider
 
-- Sample navigation and page changing to demonstate state
+- Sample navigation and page changing to demonstrate state
 
 - Clean Simple Styling 
 
@@ -27,7 +27,7 @@ Solex contains the following features:
 
 ## Getting Started
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), built on top of [Solana dApp Scaffold](https://github.com/solana-labs/dapp-scaffold). The following tech have been used:
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), built on top of [Solana dApp Scaffold](https://github.com/solana-labs/dapp-scaffold). The following technologies have been used:
 ```
 - TypeScript
 - Next.js
@@ -35,7 +35,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - @solana/wallet-adapter-wallets
 ```
 
-The responsive version for wallets and wallet adapter may not function or work as expected for mobile based on plugin and wallet compatibility.
+The responsive version for wallets and the wallet adapter may not function or work as expected for mobile based on plugin and wallet compatibility.
 
 ## Installation
 
@@ -76,21 +76,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 style, package, configuration, and other project files
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
