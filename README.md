@@ -3,6 +3,9 @@
 Solex allows users to look up transactions and accounts on the various Solana clusters. Solex takes inspiration from [Explorer | Solana](https://explorer.solana.com/). Solex lets you connect your wallet, check your balance, get your token accounts, and view your transaction history with great details.
 
 
+![](solex-desktop.png)
+
+
 
 ## Features
 
