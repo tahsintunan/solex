@@ -7,6 +7,7 @@ import { notify } from "../utils/notifications";
 export const TransactionLog: FC = () => {
     const { connection } = useConnection();
     const { publicKey } = useWallet();
+    // const publicKey = new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
     const [transactionHistory, setTransactionHistory] = useState<ParsedTransactionWithMeta[]>(null);
     const [transactionTable, setTransactionTable] = useState<JSX.Element>(null);
 
@@ -46,6 +47,9 @@ export const TransactionLog: FC = () => {
                 </thead>
             )
             let rows = transactionHistory.map((transaction, i) => {
+                if (!transaction || !transaction.blockTime) {
+                    return null;
+                }
                 let date = new Date(transaction.blockTime * 1000).toLocaleDateString();
                 return (
                     <tr key={i + 1} className="bg-white border-b bg-zinc-800 dark:border-zinc-700">
