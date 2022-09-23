@@ -1,5 +1,6 @@
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { PublicKey, ParsedTransactionWithMeta } from '@solana/web3.js';
+import Link from 'next/link';
 import { FC, useEffect, useState } from 'react';
 import { notify } from "../utils/notifications";
 //Add import dependencies here
@@ -54,8 +55,9 @@ export const TransactionLog: FC = () => {
                 return (
                     <tr key={i + 1} className="bg-white border-b bg-zinc-800 dark:border-zinc-700">
                         <td className="px-6 py-3">
-                            {/* some transactions return more than 1 signature -- we only want the 1st one */}
-                            {transaction.transaction.signatures[0]}
+                            <Link href={'../tx/' + transaction.transaction.signatures[0]}>
+                                {transaction.transaction.signatures[0]}
+                            </Link>
                         </td>
                         <td className="px-6 py-3">{transaction.slot.toLocaleString("en-US")}</td>
                         <td className="px-6 py-3">{date}</td>

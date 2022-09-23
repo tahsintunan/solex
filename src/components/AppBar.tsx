@@ -20,7 +20,7 @@ export const AppBar: FC = props => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </label>
-        
+
           <div className="hidden sm:inline w-22 h-22 md:p-2">
             <svg width="100%" height="22" viewBox="0 0 646 96" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_1064_606)">
@@ -57,6 +57,9 @@ export const AppBar: FC = props => {
             </Link>
             <Link href="/basics">
               <a className="btn btn-ghost btn-sm rounded-btn">Basics</a>
+            </Link>
+            <Link href="/explorer">
+              <a className="btn btn-ghost btn-sm rounded-btn">Explorer</a>
             </Link>
           </div>
         </div>
