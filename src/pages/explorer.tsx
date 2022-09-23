@@ -6,7 +6,7 @@ const Explorer: NextPage = (props) => {
     return (
         <div>
             <Head>
-                <title>Solana Scaffold</title>
+                <title>Solex</title>
                 <meta
                     name="description"
                     content="Basic Functionality"
